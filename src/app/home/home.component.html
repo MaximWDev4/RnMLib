@@ -1,0 +1,21 @@
+<div
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="1000"
+  (scrolled)="paginate()"
+  class="container"
+>
+  <mat-card *ngFor="let char of charList" class="my-1">
+    <mat-card-header>
+      <div>
+        <mat-card-title>{{ char.name }}</mat-card-title>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="row">
+      <div class="img-container col-6 align-items-center d-flex">
+        <a [routerLink]="['/character', char.id]"> <img *ngIf="char.avatar" [src]="char.avatar" width="200" height="200"></a>
+        <img [src]="GenderDictionary[char.gender]" width="100" height="100">
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

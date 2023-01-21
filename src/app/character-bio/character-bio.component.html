@@ -1,0 +1,20 @@
+<a routerLink="/home" class="back_btn"><img src="assets/back.png" alt="<-" width="51.2" height="51.2"></a>
+<mat-card class="char_card">
+  <mat-card-header>
+    <H1 class="title_text">{{charSpec.name}}</H1>
+  </mat-card-header>
+  <mat-card-subtitle>
+    <h3 class="sub_text">{{charSpec.status}}</h3>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div class="row">
+      <img class="col-5" [src]="charSpec.avatar" alt="avatar" style="max-width: 300px">
+      <div class="col-6">
+        Gender: {{charSpec.gender}} <br/>
+        <div class="episodes_scroll_box">
+          Episodes:
+          <span *ngFor="let ep of charSpec.episodes; let last = last">{{ep}} {{last? '. ' : ', '}}</span> </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

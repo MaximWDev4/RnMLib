@@ -1,0 +1,37 @@
+.back_btn{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transition: transform 100ms ease-in;
+}
+.back_btn:hover  {
+  transform: scale(1.2);
+}
+.back_btn:active{
+  transform: scale(1);
+}
+.char_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 60vh;
+  width: 70vw;
+  transform: translate(-35vw, -30vh);
+}
+.title_text {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.sub_text {
+  width: 100%;
+  text-align: center;
+}
+.episodes_scroll_box{
+  max-height: 200px;
+  max-width: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  line-break: loose;
+}

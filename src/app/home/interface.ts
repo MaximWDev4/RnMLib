@@ -4,7 +4,3 @@ export interface CharCard {
   name: string,
   gender: string,
 }
-
-export interface Dictionary<Type> {
-  [key: string]: Type;
-}

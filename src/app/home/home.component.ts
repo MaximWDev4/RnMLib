@@ -1,20 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {CharCard, Dictionary} from './interface';
-import { getCharacters } from 'rickmortyapi'
+import {CharCard} from './interface';
+import { getCharacters } from 'rickmortyapi';
+import {GenderDictionary} from "../interface";
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  GenderDictionary: Dictionary<String> = {
-    'Female': 'assets/female.svg',
-    'Male': 'assets/male.svg',
-    'Genderless': 'assets/agender.svg',
-    'unknown': 'assets/unknown-gender.svg'
-  }
   page = 0;
   charList: CharCard[] = [];
+  GenderDictionary = GenderDictionary;
   ngOnInit() {
     this.paginate();
   }

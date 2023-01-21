@@ -16,7 +16,7 @@ import { MatCardModule} from "@angular/material/card";
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

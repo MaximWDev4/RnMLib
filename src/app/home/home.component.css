@@ -1,0 +1,7 @@
+.gender {
+  transform: translateX(-50px);
+}
+.img-lik{
+  display: flex;
+  align-items: end;
+}

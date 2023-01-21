@@ -1,5 +1,11 @@
+.title_text {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
 .gender {
-  transform: translateX(-50px);
+  margin-left: -50px;
 }
 .img-lik{
   display: flex;

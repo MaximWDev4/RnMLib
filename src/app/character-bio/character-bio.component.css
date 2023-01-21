@@ -29,7 +29,7 @@
   text-align: center;
 }
 .episodes_scroll_box{
-  max-height: 200px;
+  max-height: 80%;
   max-width: 100%;
   overflow-y: auto;
   overflow-x: auto;

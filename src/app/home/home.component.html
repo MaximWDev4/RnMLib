@@ -1,18 +1,17 @@
+<div class="container">
 <div
   infinite-scroll
   [infiniteScrollDistance]="2"
   [infiniteScrollThrottle]="1000"
   (scrolled)="paginate()"
-  class="container"
+  class="d-flex flex-wrap"
 >
-  <mat-card *ngFor="let char of charList" class="my-1">
+  <mat-card *ngFor="let char of charList" class="my-1 col-4">
     <mat-card-header>
-      <div>
-        <mat-card-title>{{ char.name }}</mat-card-title>
-      </div>
+       <h2 class="title_text">{{ char.name }}</h2>
     </mat-card-header>
-    <mat-card-content class="row ">
-      <div class="img-container col-6 align-items-center d-flex">
+    <mat-card-content>
+      <div class="img-container justify-content-center align-items-center d-flex">
         <a [routerLink]="['/character', char.id]" class="img-lik">
           <img *ngIf="char.avatar" [src]="char.avatar" width="200" height="200">
           <img class="gender" [src]="GenderDictionary[char.gender]" width="50" height="50">
@@ -21,4 +20,5 @@
       </div>
     </mat-card-content>
   </mat-card>
+</div>
 </div>
